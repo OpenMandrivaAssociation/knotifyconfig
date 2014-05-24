@@ -24,6 +24,7 @@ BuildRequires: cmake(KF5Config)
 BuildRequires: cmake(KF5I18n)
 BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5Service)
+BuildRequires: cmake(KF5Notifications)
 BuildRequires: ninja
 
 %description
