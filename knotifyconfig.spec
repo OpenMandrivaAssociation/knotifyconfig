@@ -5,7 +5,7 @@
 
 Name: knotifyconfig
 Version: 4.99.0
-Release: 2
+Release: 3
 Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: Configuration system for knotify
 URL: http://kde.org/
