@@ -4,9 +4,9 @@
 %define debug_package %{nil}
 
 Name: knotifyconfig
-Version: 4.99.0
-Release: 3
-Source0: http://ftp5.gwdg.de/pub/linux/kde/unstable/frameworks/%{version}/%{name}-%{version}.tar.xz
+Version: 5.0.0
+Release: 1
+Source0: http://ftp5.gwdg.de/pub/linux/kde/stable/frameworks/%{version}/%{name}-%{version}.tar.xz
 Summary: Configuration system for knotify
 URL: http://kde.org/
 License: GPL
@@ -26,6 +26,7 @@ BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5Service)
 BuildRequires: cmake(KF5Notifications)
 BuildRequires: ninja
+Requires: %{libname} = %{EVRD}
 
 %description
 Configuration system for knotify
@@ -33,6 +34,7 @@ Configuration system for knotify
 %package -n %{libname}
 Summary: The KDE Frameworks 5 NotifyConfig library
 Group: System/Libraries
+Requires: %{name} = %{EVRD}
 
 %description -n %{libname}
 The KDE Frameworks 5 NotifyConfig library
@@ -54,6 +56,9 @@ ninja -C build
 
 %install
 DESTDIR="%{buildroot}" ninja -C build install %{?_smp_mflags}
+%find_lang knotifyconfig5
+
+%files -f knotifyconfig5.lang
 
 %files -n %{libname}
 %{_libdir}/*.so.%{major}
