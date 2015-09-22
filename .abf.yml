@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   knotifyconfig-5.13.0.tar.xz: 4fbe4de7b86721bbb657c4c75acc0dfb9fb67dda
+sources:
+  knotifyconfig-5.14.0.tar.xz: 28adae56b29f509f03c48bf845588ce760fae82e
