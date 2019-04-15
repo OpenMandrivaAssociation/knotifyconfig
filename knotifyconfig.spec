@@ -31,6 +31,7 @@ BuildRequires: cmake(KF5KIO)
 BuildRequires: cmake(KF5Service)
 BuildRequires: cmake(KF5Notifications)
 # For QCH format docs
+BuildRequires: doxygen
 BuildRequires: qt5-assistant
 Requires: %{libname} = %{EVRD}
 
