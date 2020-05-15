@@ -6,13 +6,14 @@
 
 Name: knotifyconfig
 Version:	5.70.0
-Release:	1
+Release:	2
 Source0: http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
 Summary: Configuration system for knotify
 URL: http://kde.org/
 License: GPL
 Group: System/Libraries
-BuildRequires: extra-cmake-modules5
+BuildRequires: cmake(ECM)
+BuildRequires: pkgconfig(libcanberra)
 BuildRequires: pkgconfig(phonon4qt5)
 BuildRequires: pkgconfig(Qt5Core)
 BuildRequires: pkgconfig(Qt5DBus)
@@ -20,6 +21,7 @@ BuildRequires: pkgconfig(Qt5Gui)
 BuildRequires: pkgconfig(Qt5Test)
 BuildRequires: pkgconfig(Qt5Widgets)
 BuildRequires: pkgconfig(Qt5Concurrent)
+BuildRequires: cmake(Qt5TextToSpeech)
 BuildRequires: cmake(KF5DocTools)
 BuildRequires: cmake(ECM)
 BuildRequires: cmake(Qt5)
@@ -63,7 +65,7 @@ Suggests: %{devname} = %{EVRD}
 Developer documentation for %{name} for use with Qt Assistant
 
 %prep
-%setup -q
+%autosetup -p1
 %cmake_kde5
 
 %build
